@@ -1,7 +1,15 @@
-import 'package:flutter/material.dart';
-import 'package:wha/app/modules/patient/P_All_Packages_List.dart';
 
-class P_All_Package extends StatelessWidget
+
+
+
+
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../routes/app_pages.dart';
+import 'p_all_prescription_module/p_all_prescription_page.dart';
+
+class P_Prescription_DashBoard extends StatelessWidget
 {
   @override
   Widget build(BuildContext context) {
@@ -46,13 +54,15 @@ class P_All_Package extends StatelessWidget
                   ),
                   onPressed: (){
                     //logIn(emailController.text.toString(),passwordController.text.toString());
-                     Navigator.push(
-                         context,
-                         MaterialPageRoute(
-                             builder: (context) =>
-                                P_All_Packages_List()
-                         )
-                     );
+                    //  Navigator.push(
+                    //      context,
+                    //      MaterialPageRoute(
+                    //         builder: (context) =>
+                    //              PAllPrescriptionPage()
+                    //      )
+                    //  );
+
+                    Get.toNamed(Routes.P_ALL_PRESCRIPTION);
 
                   },
                   child: Row(
@@ -73,7 +83,7 @@ class P_All_Package extends StatelessWidget
                         ),
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(45,11,0,0),//all(8.0),
-                          child: Text("All Packages",
+                          child: Text("All Pescription List",
 
                             style: TextStyle(
                                 fontSize: 12,
@@ -138,7 +148,7 @@ class P_All_Package extends StatelessWidget
                         ),
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(45,11,0,0),//all(8.0),
-                          child: Text("Enrolled Packages",
+                          child: Text("Special  Prescription",
 
                             style: TextStyle(
                                 fontSize: 12,

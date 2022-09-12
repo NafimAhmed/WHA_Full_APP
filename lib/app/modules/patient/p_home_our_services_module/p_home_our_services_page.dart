@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../P_All_Package.dart';
+import '../P_Prescribtion_DashBoard.dart';
 
 class PHomeOurServicesPage extends GetView<PHomeOurServicesController> {
   const PHomeOurServicesPage({Key? key}) : super(key: key);
@@ -86,7 +87,21 @@ class PHomeOurServicesPage extends GetView<PHomeOurServicesController> {
                       image: 'assets/icon.png',
                       title: 'Prescriptions',
                       onTap: () {
-                        Get.toNamed(Routes.P_ALL_PRESCRIPTION);
+
+                        //P_Prescription_DashBoard
+
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    P_Prescription_DashBoard()
+                            )
+                        );
+
+
+
+
+                        //Get.toNamed(Routes.P_ALL_PRESCRIPTION);
                       }),
                   BuildService(
                       image: 'assets/icon.png',

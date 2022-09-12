@@ -1,7 +1,12 @@
-import 'package:flutter/material.dart';
-import 'package:wha/app/modules/patient/P_All_Packages_List.dart';
 
-class P_All_Package extends StatelessWidget
+
+
+
+
+import 'package:flutter/material.dart';
+import 'package:wha/app/modules/patient/P_Silver_Package.dart';
+
+class P_All_Packages_List extends StatelessWidget
 {
   @override
   Widget build(BuildContext context) {
@@ -16,7 +21,7 @@ class P_All_Package extends StatelessWidget
                 children: [
 
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(28,52,220,103),
+                    padding: const EdgeInsets.fromLTRB(28,52,220,0),
                     child: Container(
                         alignment: Alignment.topRight,
                         child: Icon(Icons.arrow_back)
@@ -25,13 +30,13 @@ class P_All_Package extends StatelessWidget
 
 
 
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0,52,0,103),
-                    child: Image.asset("assets/logo.png",
-                      width: 65,
-                      height: 22,
-                    ),
-                  ),
+                  // Padding(
+                  //   padding: const EdgeInsets.fromLTRB(0,52,0,103),
+                  //   child: Image.asset("assets/logo.png",
+                  //     width: 65,
+                  //     height: 22,
+                  //   ),
+                  // ),
 
 
                 ],
@@ -39,7 +44,17 @@ class P_All_Package extends StatelessWidget
 
 
               Padding(
-                padding: const EdgeInsets.fromLTRB(31,0,28,20),//(left, top, right, bottom)//all(15),
+                padding: const EdgeInsets.fromLTRB(31,15,0,0),//(left, top, right, bottom),
+                child: Row(
+                  children: [
+                    Text("All Packages"),
+                  ],
+                ),
+              ),
+
+
+              Padding(
+                padding: const EdgeInsets.fromLTRB(31,103,28,20),//(left, top, right, bottom)//all(15),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       primary: Colors.white
@@ -50,7 +65,7 @@ class P_All_Package extends StatelessWidget
                          context,
                          MaterialPageRoute(
                              builder: (context) =>
-                                P_All_Packages_List()
+                                P_Silver_Package()
                          )
                      );
 
@@ -73,7 +88,7 @@ class P_All_Package extends StatelessWidget
                         ),
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(45,11,0,0),//all(8.0),
-                          child: Text("All Packages",
+                          child: Text("Silver",
 
                             style: TextStyle(
                                 fontSize: 12,
@@ -138,7 +153,7 @@ class P_All_Package extends StatelessWidget
                         ),
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(45,11,0,0),//all(8.0),
-                          child: Text("Enrolled Packages",
+                          child: Text("Gold",
 
                             style: TextStyle(
                                 fontSize: 12,
@@ -172,7 +187,7 @@ class P_All_Package extends StatelessWidget
 
 
 
-             /* Padding(
+              Padding(
                 padding: const EdgeInsets.fromLTRB(31,0,28,20),//(left, top, right, bottom)//all(15),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -207,7 +222,7 @@ class P_All_Package extends StatelessWidget
                         ),
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(45,11,0,0),//all(8.0),
-                          child: Text("Add a Vital Sign",
+                          child: Text("Platinum",
 
                             style: TextStyle(
                                 fontSize: 12,
@@ -232,7 +247,7 @@ class P_All_Package extends StatelessWidget
                     ],
                   ),
                 ),
-              ),*/
+              ),
 
 
 
