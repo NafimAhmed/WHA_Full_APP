@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart'as http;
 import 'package:wha/app/modules/user_management/confirm_phone_module/confirm_phone_controller.dart';
+import 'package:wha/app/modules/user_management/verify_otp_module/verify_otp_page.dart';
 import 'package:wha/app/routes/app_pages.dart';
 import 'package:wha/app/theme/app_colors.dart';
 
@@ -301,10 +302,18 @@ class ConfirmPhonePage extends GetView<ConfirmPhoneController> {
 
 
                               sendOtp(
-                                  number: "+8801797609439",//phoneEditingController.text.toString(),
+                                  number: phoneEditingController.text.toString(),//phoneEditingController.text.toString(),
                                 otp: 123456
 
                               );
+
+                              // Navigator.push(
+                              //     context,
+                              //     MaterialPageRoute(
+                              //         builder: (context) =>
+                              //             VerifyOtpPage()
+                              //     )
+                              // );
 
                               //Verifi_Phone(phoneEditingController.text.toString());
 

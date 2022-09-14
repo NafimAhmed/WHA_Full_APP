@@ -32,6 +32,7 @@ class ConcernProvider {
           int id = info['id'] ?? 0;
           String concern = info['name'] ?? '';
           String icon = info['image'] ?? '';
+
           concerns.add(Concern(id: id, concern: concern, icon: icon));
         }
       }

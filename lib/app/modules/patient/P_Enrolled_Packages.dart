@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:wha/app/modules/patient/P_All_Packages_List.dart';
-import 'package:wha/app/modules/patient/P_Enrolled_Packages.dart';
 
-class P_All_Package extends StatelessWidget
+
+import 'package:flutter/material.dart';
+import 'package:wha/app/modules/patient/P_Enrolled_Package_detail.dart';
+
+class P_Enrolled_Packages extends StatelessWidget
 {
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class P_All_Package extends StatelessWidget
                 children: [
 
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(28,52,220,103),
+                    padding: const EdgeInsets.fromLTRB(28,52,220,0),
                     child: Container(
                         alignment: Alignment.topRight,
                         child: Icon(Icons.arrow_back)
@@ -27,7 +28,7 @@ class P_All_Package extends StatelessWidget
 
 
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(0,52,0,103),
+                    padding: const EdgeInsets.fromLTRB(0,52,0,0),
                     child: Image.asset("assets/logo.png",
                       width: 65,
                       height: 22,
@@ -35,6 +36,16 @@ class P_All_Package extends StatelessWidget
                   ),
 
 
+                ],
+              ),
+              
+              
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(30,15,0,103),//(left, top, right, bottom),
+                    child: Text("Enrolled Packages"),
+                  ),
                 ],
               ),
 
@@ -51,7 +62,7 @@ class P_All_Package extends StatelessWidget
                          context,
                          MaterialPageRoute(
                              builder: (context) =>
-                                P_All_Packages_List()
+                                 P_Silver_Package_enrolled()
                          )
                      );
 
@@ -74,7 +85,7 @@ class P_All_Package extends StatelessWidget
                         ),
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(45,11,0,0),//all(8.0),
-                          child: Text("All Packages",
+                          child: Text("Silver Packages",
 
                             style: TextStyle(
                                 fontSize: 12,
@@ -104,7 +115,7 @@ class P_All_Package extends StatelessWidget
 
 
 
-              Padding(
+             /* Padding(
                 padding: const EdgeInsets.fromLTRB(31,0,28,20),//(left, top, right, bottom)//all(15),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -112,13 +123,13 @@ class P_All_Package extends StatelessWidget
                   ),
                   onPressed: (){
                     //logIn(emailController.text.toString(),passwordController.text.toString());
-                     Navigator.push(
-                         context,
-                         MaterialPageRoute(
-                             builder: (context) =>
-                         P_Enrolled_Packages()
-                         )
-                     );
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) =>
+                    //             Doctor_Add_Vitals()
+                    //     )
+                    // );
 
                   },
                   child: Row(
@@ -139,7 +150,7 @@ class P_All_Package extends StatelessWidget
                         ),
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(45,11,0,0),//all(8.0),
-                          child: Text("Enrolled Packages",
+                          child: Text("Add Patient History",
 
                             style: TextStyle(
                                 fontSize: 12,
@@ -164,7 +175,7 @@ class P_All_Package extends StatelessWidget
                     ],
                   ),
                 ),
-              ),
+              ),*/
 
 
 
@@ -173,7 +184,7 @@ class P_All_Package extends StatelessWidget
 
 
 
-             /* Padding(
+              /* Padding(
                 padding: const EdgeInsets.fromLTRB(31,0,28,20),//(left, top, right, bottom)//all(15),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -239,7 +250,7 @@ class P_All_Package extends StatelessWidget
 
 
 
-             /* Padding(
+              /* Padding(
                 padding: const EdgeInsets.fromLTRB(31,0,28,20),//(left, top, right, bottom)//all(15),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(

@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:wha/app/modules/patient/p_sign_up_module/p_sign_up_page.dart';
 import 'package:wha/app/modules/user_management/signup_select_role_module/signup_select_role_controller.dart';
 import 'package:wha/app/theme/app_colors.dart';
 
 class SignupSelectRolePage extends GetView<SignupSelectRoleController> {
   const SignupSelectRolePage({Key? key}) : super(key: key);
+
+  // String phone_num;
+  //
+  // SignupSelectRolePage(this.phone_num, this.otp);
+  //
+  // int otp;
+
 
   @override
   Widget build(BuildContext context) {
@@ -114,6 +122,16 @@ class SignupSelectRolePage extends GetView<SignupSelectRoleController> {
                     child: ElevatedButton(
                       onPressed: () {
                         controller.patientSignup();
+
+                        //  Navigator.push(
+                        //      context,
+                        //      MaterialPageRoute(
+                        //         builder: (context) =>
+                        //             PSignUpPage(phone_num,otp)
+                        //      )
+                        // );
+
+
                       },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,

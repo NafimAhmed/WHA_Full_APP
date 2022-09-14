@@ -58,7 +58,7 @@ class _ConnectivityPipeState extends State<ConnectivityPipe> {
         stream: Connectivity().onConnectivityChanged,
         builder:
             (BuildContext context, AsyncSnapshot<ConnectivityResult> snapshot) {
-          WidgetsBinding.instance!.addPostFrameCallback((_) {
+          WidgetsBinding.instance/*!*/.addPostFrameCallback((_) {
             if (snapshot.data == ConnectivityResult.none) {
               ScaffoldMessenger.of(context).showSnackBar(noInternetSnackBar);
               setState(() {
@@ -85,7 +85,7 @@ class _ConnectivityPipeState extends State<ConnectivityPipe> {
               if (snapshot.data == ConnectivityResult.none) {
                 return const NoInternet();
               } else if (result.hasData && result.data == false) {
-                WidgetsBinding.instance!.addPostFrameCallback((_) {
+                WidgetsBinding.instance/*!*/.addPostFrameCallback((_) {
                   ScaffoldMessenger.of(context).showSnackBar(noInternetSnackBar);
                   setState(() {
                     isNoInternetSnackBarVisible = true;

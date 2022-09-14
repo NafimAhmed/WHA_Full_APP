@@ -1,3 +1,5 @@
+import 'package:wha/app/data/api.dart';
+
 class Concern{
   int id = 0;
   String concern = '';
@@ -21,6 +23,7 @@ class Concern{
   Concern.fromMap(Map<String, dynamic> map){
     id = map['id'] ?? 0;
     concern = map['concern'] ?? '';
+
     icon = map['icon'] ?? '';
   }
 

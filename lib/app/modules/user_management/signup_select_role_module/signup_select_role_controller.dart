@@ -4,6 +4,7 @@ import 'package:wha/app/routes/app_pages.dart';
 class SignupSelectRoleController extends GetxController{
   patientSignup(){
     Get.toNamed(Routes.P_SIGN_UP);
+
   }
   doctorSignup(){
     Get.toNamed(Routes.D_SIGN_UP);

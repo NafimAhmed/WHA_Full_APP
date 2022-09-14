@@ -23,12 +23,14 @@ class PSignUpPage extends GetView<PSignUpController> {
 
    PSignUpPage({Key? key}) : super(key: key);
 
+   // String phone_number;
+   // int otp;
+   //
+   //
+   //
+   // PSignUpPage(this.phone_number,this.otp);
 
-
-
-
-
-  bool goodToGo=false;
+   bool goodToGo=false;
 
 
   TextEditingController nameEditingController=TextEditingController();
@@ -603,7 +605,8 @@ class PSignUpPage extends GetView<PSignUpController> {
 
                         ///////////////////////////////////////
 
-                       signupPatient(nameEditingController.text.toString(),"assets/icon.png","01747609439",addressEditingController.text.toString(),123456,passwordEditingController.text.toString());
+                       signupPatient(nameEditingController.text.toString(),"assets/icon.png","+8801797609439",addressEditingController.text.toString(),123456,passwordEditingController.text.toString());
+
 
 
                         // if(a!=true)

@@ -19,7 +19,9 @@ class PChooseHealthConcernPage extends GetView<PChooseHealthConcernController> {
           child: PhysicalModel(
             color: backgroundColor,
             borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20)
+            ),
             elevation: 30,
             child: Column(
               children: [
