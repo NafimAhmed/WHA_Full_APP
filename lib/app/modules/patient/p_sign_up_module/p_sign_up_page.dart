@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wha/app/modules/patient/p_sign_up_module/p_sign_up_controller.dart';
+import 'package:wha/app/modules/user_management/confirm_phone_module/confirm_phone_controller.dart';
 import 'package:wha/app/routes/app_pages.dart';
 import 'package:wha/app/theme/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -36,6 +37,8 @@ class PSignUpPage extends GetView<PSignUpController> {
   TextEditingController nameEditingController=TextEditingController();
   TextEditingController passwordEditingController=TextEditingController();
   TextEditingController addressEditingController=TextEditingController();
+
+   TextEditingController phoneEditingController=TextEditingController();
 
   ////////////////////////////////////////////////
 
@@ -91,7 +94,7 @@ class PSignUpPage extends GetView<PSignUpController> {
           String address,
           String phone,
           int otp,
-          String password) async {
+          String password, BuildContext context) async {
      final SharedPreferences prefs = await SharedPreferences.getInstance();
      final Map<String, dynamic> _body = {
        'name': name,
@@ -113,6 +116,12 @@ class PSignUpPage extends GetView<PSignUpController> {
 
          Get.toNamed(Routes.P_DASHBOARD);
          return Future.value(true);
+       }else{
+
+         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+           content: Text("You are already registered"),
+         ));
+
        }
      } catch (_) {}
      return Future.value(false);
@@ -493,12 +502,88 @@ class PSignUpPage extends GetView<PSignUpController> {
                   const SizedBox(height: 20),
 
                   const Text(
-                    'Password',
+                    'Phone Number',
                     style: TextStyle(
                       fontSize: 18,
                     ),
                   ),
                   const SizedBox(height: 12),
+
+
+                 /////////////////////////////////////////////
+
+
+                  SizedBox(
+                    height: 50,
+                    child: TextFormField(
+
+                      controller: phoneEditingController,
+
+                      cursorColor: primaryColor,
+                      keyboardType: TextInputType.name,
+                      textAlignVertical: TextAlignVertical.bottom,
+                      decoration: InputDecoration(
+                        border: const OutlineInputBorder(
+                          borderSide: BorderSide(color: primaryColor, width: 2.0),
+                        ),
+                        enabledBorder: const OutlineInputBorder(
+                          borderSide: BorderSide(color: primaryColor, width: 1.0),
+                        ),
+                        focusedBorder: const OutlineInputBorder(
+                          borderSide: BorderSide(color: primaryColor, width: 2.0),
+                        ),
+                        hintText: 'Phone Number',
+                        enabled: controller.formOpacity == 1 ? true : false,
+                        focusColor: primaryColor,
+                      ),
+                      onSaved: (String? value) {
+                        controller.name = value ?? '';
+                        controller.refreshSignupButtonColor();
+                      },
+                      onChanged: (String? value) {
+                        controller.name = value ?? '';
+                        controller.refreshSignupButtonColor();
+                      },
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Phone number is required';
+                          goodToGo=false;
+                        }
+                        else{
+                          goodToGo=true;
+                        }
+                        return null;
+                      },
+                    ),
+                  ),
+
+
+
+
+
+
+
+
+
+                 /////////////////////////////////////////////
+
+
+
+                  const SizedBox(height: 20),
+
+
+                  const Text(
+                    'Password',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+
+
+
+
+
+
                   SizedBox(
                     height: 50,
                     child: TextFormField(
@@ -542,6 +627,9 @@ class PSignUpPage extends GetView<PSignUpController> {
                       },
                     ),
                   ),
+
+
+
                   const SizedBox(height: 20),
 
                   const Text(
@@ -605,7 +693,8 @@ class PSignUpPage extends GetView<PSignUpController> {
 
                         ///////////////////////////////////////
 
-                       signupPatient(nameEditingController.text.toString(),"assets/icon.png","+8801797609439",addressEditingController.text.toString(),123456,passwordEditingController.text.toString());
+                       signupPatient(nameEditingController.text.toString(),"assets/icon.png",phoneEditingController.text.toString(),addressEditingController.text.toString(),123456,passwordEditingController.text.toString(),context);
+
 
 
 

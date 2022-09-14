@@ -8,7 +8,7 @@ class ConfirmPhoneController extends GetxController{
   final _opacity = 1.0.obs;
   final _error = ''.obs;
 
-  get phone => _phone.value;
+  get phone2 => _phone.value;
 
   get countryCode => _countryCode.value;
 
