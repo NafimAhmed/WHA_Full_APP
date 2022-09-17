@@ -3,7 +3,7 @@
 
 import 'package:flutter/material.dart';
 
-class P_add_Patient_Vitals extends StatelessWidget
+class P_add_Patient_History extends StatelessWidget
 {
   @override
   Widget build(BuildContext context) {
@@ -12,6 +12,8 @@ class P_add_Patient_Vitals extends StatelessWidget
       home: Scaffold(
         body: Column(
           children: [
+
+
 
           ],
         ),

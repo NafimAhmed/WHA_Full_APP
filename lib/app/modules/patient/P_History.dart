@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wha/app/modules/patient/All_Previous_History.dart';
+
+import 'P_Add Patient history.dart';
 
 class P_History extends StatelessWidget
 {
@@ -45,13 +48,13 @@ class P_History extends StatelessWidget
                   ),
                   onPressed: (){
                     //logIn(emailController.text.toString(),passwordController.text.toString());
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) =>
-                    //             Doctor_Add_Vitals()
-                    //     )
-                    // );
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                All_previous_History()
+                        )
+                    );
 
                   },
                   child: Row(
@@ -109,14 +112,14 @@ class P_History extends StatelessWidget
                       primary: Colors.white
                   ),
                   onPressed: (){
-                    //logIn(emailController.text.toString(),passwordController.text.toString());
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) =>
-                    //             Doctor_Add_Vitals()
-                    //     )
-                    // );
+
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                P_add_Patient_History()
+                        )
+                    );
 
                   },
                   child: Row(
