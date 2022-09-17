@@ -32,16 +32,18 @@ class BuildConcern extends StatelessWidget {
                 child: Image(
                   image: NetworkImage(
                     '${Api.baseAPI}/${concern.icon}',
+
+
                   ),
-                  errorBuilder: (BuildContext context, Object obj, StackTrace? stackTrace){
-                    return const Image(
-                      image: AssetImage(
-                        'assets/icon.png',
-                      ),
-                      height: 50,
-                      width: 50,
-                    );
-                  },
+                  // errorBuilder: (BuildContext context, Object obj, StackTrace? stackTrace){
+                  //   return const Image(
+                  //     image: AssetImage(
+                  //       'assets/icon.png',
+                  //     ),
+                  //     height: 50,
+                  //     width: 50,
+                  //   );
+                  // },
                   height: 50,
                   width: 50,
                 ),

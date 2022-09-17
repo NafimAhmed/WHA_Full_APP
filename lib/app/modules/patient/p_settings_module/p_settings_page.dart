@@ -176,7 +176,11 @@ class _PSettingsPageState extends State<PSettingsPage> {
                     ),
                   ),
                   trailing: IconButton(
-                    onPressed: () {},//=> controller.logoutDialogVisible = true,
+                    onPressed: () {
+
+
+
+                    },//=> controller.logoutDialogVisible = true,
                     icon: const Icon(
                       Icons.logout,
                       color: primaryColor,

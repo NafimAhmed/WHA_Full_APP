@@ -31,7 +31,7 @@ class ConcernProvider {
         for(Map<String, dynamic> info in iterable){
           int id = info['id'] ?? 0;
           String concern = info['name'] ?? '';
-          String icon = info['image'] ?? '';
+          String icon = info['image'] !=null ? '${info['image']}': '';
 
           concerns.add(Concern(id: id, concern: concern, icon: icon));
         }
