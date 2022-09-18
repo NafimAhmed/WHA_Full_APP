@@ -1,19 +1,24 @@
 
 
 
+
+
+
+
+
 import 'package:flutter/material.dart';
 
-class P_add_Patient_History extends StatefulWidget
+class P_add_Report_Type extends StatefulWidget
 {
 
   @override
-  State<P_add_Patient_History> createState() => _P_add_Patient_HistoryState();
+  State<P_add_Report_Type> createState() => _P_add_Report_TypeState();
 }
 
 
-enum SingingCharacter { M_YES,A_YES,A_NO,OD_YES,M_NO,OD_NO, Allergic, Heart,Normal,Modarate,Sever}
+enum SingingCharacter { M_YES,A_YES,A_NO,OD_YES,M_NO,OD_NO, X_Ray, ESR,Normal,Modarate,Sever,CBC}
 
-class _P_add_Patient_HistoryState extends State<P_add_Patient_History> {
+class _P_add_Report_TypeState extends State<P_add_Report_Type> {
   bool extension1=false;
   bool extension2=false;
   bool extension3=false;
@@ -57,8 +62,8 @@ class _P_add_Patient_HistoryState extends State<P_add_Patient_History> {
 
 
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(0,52,0,0),
-                    child: Icon(Icons.search)
+                      padding: const EdgeInsets.fromLTRB(0,52,0,0),
+                      child: Icon(Icons.search)
                   ),
 
 
@@ -71,7 +76,7 @@ class _P_add_Patient_HistoryState extends State<P_add_Patient_History> {
                 padding: const EdgeInsets.fromLTRB(28,15,0,21),
                 child: Row(
                   children: [
-                    Text("Add Patient History",
+                    Text("Report Type",
 
                       style: TextStyle(
 
@@ -99,7 +104,7 @@ class _P_add_Patient_HistoryState extends State<P_add_Patient_History> {
 
                       onPressed: (){
                         ang1=ang1*-1;
-                        setState(()=>extension1=!extension1);
+                        setState(()=>extension4=!extension4);
                       },
 
                       child: Container(
@@ -113,7 +118,7 @@ class _P_add_Patient_HistoryState extends State<P_add_Patient_History> {
                         child: Center(
                           child: Row(
                             children: [
-                              Text("Are you suffering from morbidity?          ",
+                              Text("Clinical Report          ",
 
 
                                 style: TextStyle(color: Colors.black,
@@ -151,271 +156,80 @@ class _P_add_Patient_HistoryState extends State<P_add_Patient_History> {
 
 
 
-                    Visibility(
+                    Container(
 
-                      child: Container(
+                      child: Column(
 
-                        child: Column(
-
-                          children: [
+                        children: [
 
 
 
-                            //////////////////////////////////////////////////////////////
+                          //////////////////////////////////////////////////////////////
 
 
-                            ListView(
-                              shrinkWrap: true,
-                              physics: const BouncingScrollPhysics(),
-                              padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                          Visibility(
+                            child: Column(
+
                               children: [
 
 
-                                ListTile(
-                                  title: Text("Yes"),
-                                  onTap: (){
-
-                                    setState(()=>extension4=!extension4);
-
-                                  },
-                                ),
-
-                                ////////////////////////////////////
-
-                                Visibility(
-                                    child: Column(
-
-                                      children: [
-
-
-                                        Row(
-                                          children: [
-                                            Text("Select :",
-                                            style: TextStyle(
-                                              fontSize: 12
-                                            ),
-                                            ),
-                                          ],
-                                        ),
-
-
-                                        ListView(
-                                          shrinkWrap: true,
-                                          physics: const BouncingScrollPhysics(),
-                                          padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                          children: [
-
-
-                                            RadioListTile<SingingCharacter>(
-                                              title: const Text('Allergic'),
-                                              value: SingingCharacter.Allergic,
-                                              groupValue: _character_Select,
-                                              onChanged: (SingingCharacter? value) {
-                                                setState(() {
-                                                  _character_Select = value;
-                                                });
-                                              },
-                                            ),
-
-
-                                            RadioListTile<SingingCharacter>(
-                                              title: const Text('Heart'),
-                                              value: SingingCharacter.Heart,
-                                              groupValue: _character_Select,
-                                              onChanged: (SingingCharacter? value) {
-                                                setState(() {
-                                                  _character_Select = value;
-                                                });
-                                              },
-                                            ),
-
-
-                                          ],
-                                        ),
-
-
-
-
-
-                                        //////////////////////////////////////////
-
-                                       /* Row(
-                                          children: [
-                                            Text("Condition :",
-                                              style: TextStyle(
-                                                  fontSize: 12
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-
-
-                                        ListView(
-                                          shrinkWrap: true,
-                                          physics: const BouncingScrollPhysics(),
-                                          padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                          children: [
-
-
-                                            RadioListTile<SingingCharacter>(
-                                              title: const Text('Allergic'),
-                                              value: SingingCharacter.Allergic,
-                                              groupValue: _character_Catagory,
-                                              onChanged: (SingingCharacter? value) {
-                                                setState(() {
-                                                  _character_Catagory = value;
-                                                });
-                                              },
-                                            ),
-
-
-                                            RadioListTile<SingingCharacter>(
-                                              title: const Text('Heart'),
-                                              value: SingingCharacter.Heart,
-                                              groupValue: _character_Catagory,
-                                              onChanged: (SingingCharacter? value) {
-                                                setState(() {
-                                                  _character_Catagory = value;
-                                                });
-                                              },
-                                            ),
-
-
-                                          ],
-                                        ),*/
-
-                                        //////////////////////////
-
-
-
-                                        Row(
-                                          children: [
-                                            Text("Condition :",
-                                              style: TextStyle(
-                                                  fontSize: 12
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-
-
-
-                                        ListView(
-                                          shrinkWrap: true,
-                                          physics: const BouncingScrollPhysics(),
-                                          padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                          children: [
-
-
-                                            RadioListTile<SingingCharacter>(
-                                              title: const Text('Normal'),
-                                              value: SingingCharacter.Normal,
-                                              groupValue: _character_Catagory,
-                                              onChanged: (SingingCharacter? value) {
-                                                setState(() {
-                                                  _character_Catagory = value;
-                                                });
-                                              },
-                                            ),
-
-
-                                            RadioListTile<SingingCharacter>(
-                                              title: const Text('Moderate'),
-                                              value: SingingCharacter.Modarate,
-                                              groupValue: _character_Catagory,
-                                              onChanged: (SingingCharacter? value) {
-                                                setState(() {
-                                                  _character_Catagory = value;
-                                                });
-                                              },
-                                            ),
-
-
-                                            RadioListTile<SingingCharacter>(
-                                              title: const Text('Severe'),
-                                              value: SingingCharacter.Sever,
-                                              groupValue: _character_Catagory,
-                                              onChanged: (SingingCharacter? value) {
-                                                setState(() {
-                                                  _character_Catagory = value;
-                                                });
-                                              },
-                                            ),
-
-
-                                          ],
-                                        ),
-
-
-
-
-
-                                        TextFormField(
-                                          //initialValue: "5",
-                                          keyboardType: TextInputType.number,
-
-                                          decoration: InputDecoration(
-
-                                            labelText: "Rating(1-10)",
-                                            enabledBorder: OutlineInputBorder(
-                                                borderRadius: BorderRadius.circular(3.0),
-                                                borderSide: BorderSide(
-                                                  color: Color.fromARGB(255, 1, 105, 57),
-                                                ),
-
-
-                                            ),
-
-
-                                        )
-                                        ),
-
-
-
-
-
-
-                                        Padding(
-                                          padding: const EdgeInsets.fromLTRB(0,15,0,0),//(left, top, right, bottom)//all(8.0),
-                                          child: TextField(
-                                            //initialValue: "5",
-                                              keyboardType: TextInputType.number,
-                                              maxLines: 5,
-                                              decoration: InputDecoration(
-
-
-                                                labelText: "Comment",
-                                                enabledBorder: OutlineInputBorder(
-                                                  borderRadius: BorderRadius.circular(3.0),
-                                                  borderSide: BorderSide(
-                                                    color: Color.fromARGB(255, 1, 105, 57),
-
-
-                                                  ),
-
-
-                                                ),
-
-
-                                              )
-                                          ),
-                                        )
-
-
-
-
-
-                                        /////////////////////////////////////
-
-
-
-
-
-
-                                      ],
-
+                                Row(
+                                  children: [
+                                    Text("Select Your Reports :",
+                                      style: TextStyle(
+                                          fontSize: 12
+                                      ),
                                     ),
-                                  visible: extension4,
+                                  ],
+                                ),
+
+
+                                ListView(
+                                  shrinkWrap: true,
+                                  physics: const BouncingScrollPhysics(),
+                                  padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                                  children: [
+
+
+                                    RadioListTile<SingingCharacter>(
+                                      title: const Text('X-Ray'),
+                                      value: SingingCharacter.X_Ray,
+                                      groupValue: _character_Select,
+                                      onChanged: (SingingCharacter? value) {
+                                        setState(() {
+                                          _character_Select = value;
+                                        });
+                                      },
+                                    ),
+
+
+                                    RadioListTile<SingingCharacter>(
+                                      title: const Text('ESR'),
+                                      value: SingingCharacter.ESR,
+                                      groupValue: _character_Select,
+                                      onChanged: (SingingCharacter? value) {
+                                        setState(() {
+                                          _character_Select = value;
+                                        });
+                                      },
+                                    ),
+
+
+                                    RadioListTile<SingingCharacter>(
+                                      title: const Text('CBC'),
+                                      value: SingingCharacter.CBC,
+                                      groupValue: _character_Select,
+                                      onChanged: (SingingCharacter? value) {
+                                        setState(() {
+                                          _character_Select = value;
+                                        });
+                                      },
+                                    ),
+
+
+
+
+                                  ],
                                 ),
 
 
@@ -425,38 +239,209 @@ class _P_add_Patient_HistoryState extends State<P_add_Patient_History> {
 
 
 
+                                //////////////////////////////////////////
+
+                                /* Row(
+                                    children: [
+                                      Text("Condition :",
+                                        style: TextStyle(
+                                            fontSize: 12
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+
+
+                                  ListView(
+                                    shrinkWrap: true,
+                                    physics: const BouncingScrollPhysics(),
+                                    padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                                    children: [
+
+
+                                      RadioListTile<SingingCharacter>(
+                                        title: const Text('Allergic'),
+                                        value: SingingCharacter.Allergic,
+                                        groupValue: _character_Catagory,
+                                        onChanged: (SingingCharacter? value) {
+                                          setState(() {
+                                            _character_Catagory = value;
+                                          });
+                                        },
+                                      ),
+
+
+                                      RadioListTile<SingingCharacter>(
+                                        title: const Text('Heart'),
+                                        value: SingingCharacter.Heart,
+                                        groupValue: _character_Catagory,
+                                        onChanged: (SingingCharacter? value) {
+                                          setState(() {
+                                            _character_Catagory = value;
+                                          });
+                                        },
+                                      ),
+
+
+                                    ],
+                                  ),*/
+
+                                //////////////////////////
 
 
 
-                                ///////////////////////////////
+                                /*Row(
+                                  children: [
+                                    Text("Condition :",
+                                      style: TextStyle(
+                                          fontSize: 12
+                                      ),
+                                    ),
+                                  ],
+                                ),
 
 
 
-                                ListTile(
-                                  title: Text("No"),
+                                ListView(
+                                  shrinkWrap: true,
+                                  physics: const BouncingScrollPhysics(),
+                                  padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                                  children: [
 
-                                  onTap: (){
-                                    ang1=ang1*-1;
-                                    setState(()=>extension1=!extension1);
-                                  },
 
+                                    RadioListTile<SingingCharacter>(
+                                      title: const Text('Normal'),
+                                      value: SingingCharacter.Normal,
+                                      groupValue: _character_Catagory,
+                                      onChanged: (SingingCharacter? value) {
+                                        setState(() {
+                                          _character_Catagory = value;
+                                        });
+                                      },
+                                    ),
+
+
+                                    RadioListTile<SingingCharacter>(
+                                      title: const Text('Moderate'),
+                                      value: SingingCharacter.Modarate,
+                                      groupValue: _character_Catagory,
+                                      onChanged: (SingingCharacter? value) {
+                                        setState(() {
+                                          _character_Catagory = value;
+                                        });
+                                      },
+                                    ),
+
+
+                                    RadioListTile<SingingCharacter>(
+                                      title: const Text('Severe'),
+                                      value: SingingCharacter.Sever,
+                                      groupValue: _character_Catagory,
+                                      onChanged: (SingingCharacter? value) {
+                                        setState(() {
+                                          _character_Catagory = value;
+                                        });
+                                      },
+                                    ),
+
+
+                                  ],
+                                ),*/
+
+
+
+
+
+                                TextFormField(
+                                  //initialValue: "5",
+                                    keyboardType: TextInputType.number,
+
+                                    decoration: InputDecoration(
+
+                                      labelText: "Choose File",
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(3.0),
+                                        borderSide: BorderSide(
+                                          color: Color.fromARGB(255, 1, 105, 57),
+                                        ),
+
+
+                                      ),
+
+
+                                    )
+                                ),
+
+
+
+
+
+
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(0,15,0,0),//(left, top, right, bottom)//all(8.0),
+                                  child: TextField(
+                                    //initialValue: "5",
+                                      keyboardType: TextInputType.number,
+                                      maxLines: 5,
+                                      decoration: InputDecoration(
+
+
+                                        labelText: "Comment",
+                                        enabledBorder: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(3.0),
+                                          borderSide: BorderSide(
+                                            color: Color.fromARGB(255, 1, 105, 57),
+
+
+                                          ),
+
+
+                                        ),
+
+
+                                      )
+                                  ),
                                 )
 
 
 
 
 
+                                /////////////////////////////////////
+
+
+
+
+
+
                               ],
+
                             ),
+                            visible: extension4,
+                          ),
 
 
-                            // ///////////////////////////////////////////////////
 
-                          ],
-                        ),
 
+
+
+
+
+
+
+
+                          ///////////////////////////////
+
+
+
+
+
+
+                          // ///////////////////////////////////////////////////
+
+                        ],
                       ),
-                      visible: extension1,
+
                     ),
 
                   ],

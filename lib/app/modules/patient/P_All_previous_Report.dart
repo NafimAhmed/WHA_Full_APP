@@ -190,17 +190,9 @@ class _P_All_previous_ReportState extends State<P_All_previous_Report> {
                 ),
 
 
-
-
-
-
-
-
-
-
-
               ],
             ),
+
           ],
         ),
       ),

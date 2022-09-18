@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:wha/app/modules/patient/All_Previous_History.dart';
 
 import 'P_Add Patient history.dart';
+import 'P_Add_Report_Type.dart';
 import 'P_All_previous_Report.dart';
 
 
@@ -113,13 +114,13 @@ class P_All_Report extends StatelessWidget
                   ),
                   onPressed: (){
 
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) =>
-                    //             P_add_Patient_History()
-                    //     )
-                    // );
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                P_add_Report_Type()
+                        )
+                    );
 
                   },
                   child: Row(

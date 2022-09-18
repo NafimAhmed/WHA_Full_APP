@@ -18,12 +18,10 @@ class All_previous_History extends StatefulWidget
 
 class _All_previous_HistoryState extends State<All_previous_History> {
   bool extension=false;
-
   bool extension2=false;
   bool extension3=false;
 
   int ang1=-90;
-
   int ang2=-90;
   int ang3=-90;
 
