@@ -11,6 +11,7 @@ import 'package:get/get.dart';
 
 import '../P_All_Package.dart';
 import '../P_All_Report.dart';
+import '../P_Nearest_Triage.dart';
 import '../P_Prescribtion_DashBoard.dart';
 
 class PHomeOurServicesPage extends GetView<PHomeOurServicesController> {
@@ -182,6 +183,18 @@ class PHomeOurServicesPage extends GetView<PHomeOurServicesController> {
                       image: 'assets/icon.png',
                       title: 'Nearest Doctor',
                       onTap: () {
+
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) =>
+                        //             P_All_Package()
+                        //     )
+                        // );
+
+
+
+                        Get.toNamed(Routes.F_CHOOSE_HEALTH_CONCERN);
                         //Get.toNamed(Routes.P_HOME_OUR_PHARMACY);
                         //Get.toNamed(Routes.P_HOME_OUR_PHARMACY);
                       }),
@@ -191,6 +204,17 @@ class PHomeOurServicesPage extends GetView<PHomeOurServicesController> {
                       image: 'assets/icon.png',
                       title: 'Nearest Triage\nPoint',
                       onTap: () {
+
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    P_Nearest_Triage()
+                            )
+                        );
+
+
+
                         //Get.toNamed(Routes.P_HOME_OUR_PHARMACY);
                         //Get.toNamed(Routes.P_HOME_OUR_PHARMACY);
                       }),

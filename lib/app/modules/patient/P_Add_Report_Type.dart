@@ -6,7 +6,14 @@
 
 
 
+import 'dart:html';
+import 'dart:typed_data';
+
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+
+String Uploaded_file="Choose a file                                             ";
+FilePickerResult? result=null;
 
 class P_add_Report_Type extends StatefulWidget
 {
@@ -24,9 +31,12 @@ class _P_add_Report_TypeState extends State<P_add_Report_Type> {
   bool extension3=false;
   bool extension4=false;
 
+
   int ang1=-90;
   int ang2=-90;
   int ang3=-90;
+
+
 
   SingingCharacter? _character_Select= SingingCharacter.M_NO;
   SingingCharacter? _character_Catagory= SingingCharacter.M_NO;
@@ -175,9 +185,12 @@ class _P_add_Report_TypeState extends State<P_add_Report_Type> {
 
                                 Row(
                                   children: [
-                                    Text("Select Your Reports :",
-                                      style: TextStyle(
-                                          fontSize: 12
+                                    Padding(
+                                      padding: const EdgeInsets.fromLTRB(0,34,0,0),//(left, top, right, bottom),//all(8.0),
+                                      child: Text("Select Your Reports :",
+                                        style: TextStyle(
+                                            fontSize: 12
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -225,7 +238,6 @@ class _P_add_Report_TypeState extends State<P_add_Report_Type> {
                                         });
                                       },
                                     ),
-
 
 
 
@@ -352,7 +364,7 @@ class _P_add_Report_TypeState extends State<P_add_Report_Type> {
 
 
 
-                                TextFormField(
+                               /* TextFormField(
                                   //initialValue: "5",
                                     keyboardType: TextInputType.number,
 
@@ -369,6 +381,105 @@ class _P_add_Report_TypeState extends State<P_add_Report_Type> {
                                       ),
 
 
+                                    )
+                                ),*/
+
+
+
+
+                                ElevatedButton(
+
+
+                                  style: ElevatedButton.styleFrom(
+
+                                    minimumSize: Size(300, 40),
+
+                                    primary: Colors.white,
+
+
+                                      side: BorderSide(
+                                        width: 2.0,
+                                        color: Color.fromARGB(255, 1, 105, 57),
+                                      )
+                                  ),
+
+                                    onPressed: () async {
+
+                                      FilePickerResult? result = await FilePicker.platform.pickFiles();
+
+                                      if (result != null) {
+                                        Uint8List? fileBytes = result.files.first.bytes;
+                                        String fileName = result.files.first.name;
+                                        print(fileName);
+
+                                        setState(() {
+                                          Uploaded_file=fileName;
+                                        });
+
+                                        // Upload file
+                                       // await FirebaseStorage.instance.ref('uploads/$fileName').putData(fileBytes);
+                                      }
+
+
+
+
+
+                                      // FilePickerResult? result = await FilePicker.platform.pickFiles();
+                                      //
+                                      // if (result != null) {
+                                      //
+                                      //   File file = result.files.first;
+                                      //
+                                      //
+                                      //
+                                      //   print(file.name);
+                                      //   print(file.bytes);
+                                      //   print(file.size);
+                                      //   print(file.extension);
+                                      //   print(file.path);
+                                      //
+                                      //   setState(() {
+                                      //
+                                      //     Uploaded_file=file.path.toString();
+                                      //
+                                      //   });
+
+
+
+                                       // File file = File(result.files.single.path);
+                                      // } else {
+                                      //
+                                      //
+                                      //   setState(() {
+                                      //
+                                      //     Uploaded_file="Choose a file";
+                                      //
+                                      //   });
+                                      //
+                                      //   // User canceled the picker
+                                      // }
+
+
+
+
+
+                                    },
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Text(Uploaded_file,
+                                        style: TextStyle(
+                                          color: Colors.black
+                                        ),
+                                        ),
+                                        Icon(
+                                          Icons.upload_file_rounded,
+                                          color: Color.fromARGB(255, 1, 105, 57),
+
+
+
+                                        )
+                                      ],
                                     )
                                 ),
 
@@ -401,9 +512,27 @@ class _P_add_Report_TypeState extends State<P_add_Report_Type> {
 
                                       )
                                   ),
-                                )
+                                ),
 
 
+
+                                        Padding(
+                                          padding: const EdgeInsets.fromLTRB(0,51,0,0),//(left, top, right, bottom)//all(8.0),
+                                          child: ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                              primary: Colors.white,
+                                            ),
+
+                                          onPressed: (){},
+                                    child: Text("Submit",
+
+                                      style: TextStyle(
+                                        color: Colors.black
+                                      ),
+
+                                    )
+                                          ),
+                                        ),
 
 
 
@@ -713,6 +842,10 @@ class _P_add_Report_TypeState extends State<P_add_Report_Type> {
                   ],
                 ),
               ),
+
+
+
+
 
 
 

@@ -31,10 +31,10 @@ class BuildConcern extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
                 child: Image(
                   image: NetworkImage(
-                    '${Api.baseAPI}/${concern.icon}',
+                    '${Api.baseAPI}/${concern.icon}.toString()',
                   ),
                   errorBuilder: (BuildContext context, Object obj, StackTrace? stackTrace){
-                    return const Image(
+                    return Image(
                       image: AssetImage(
                         'assets/icon.png',
                       ),
