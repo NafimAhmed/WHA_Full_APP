@@ -37,14 +37,14 @@ class PHomeOurServicesPage extends GetView<PHomeOurServicesController> {
                 childAspectRatio: 1,
                 children: [
                   BuildService(
-                      image: 'assets/icon.png',
+                      image: 'assets/Appointment.jpg',
                       title: 'Get\nAppointment',
                       onTap: () {
                         Get.toNamed(Routes.P_CHOOSE_HEALTH_CONCERN);
                       }),
 
                   BuildService(
-                      image: 'assets/icon.png',
+                      image: 'assets/doctor.jpg',
                       title: 'Doctors',
                       onTap: () {
 
@@ -61,7 +61,7 @@ class PHomeOurServicesPage extends GetView<PHomeOurServicesController> {
 
 
                   BuildService(
-                      image: 'assets/icon.png',
+                      image: 'assets/vital_sign.jpg',
                       title: 'Vital Sign & BMI',
                       onTap: () {
 
@@ -86,7 +86,7 @@ class PHomeOurServicesPage extends GetView<PHomeOurServicesController> {
                         Get.toNamed(Routes.P_ALL_APPOINTMENTS);
                       }),
                   BuildService(
-                      image: 'assets/icon.png',
+                      image: 'assets/prescription.jpg',
                       title: 'Prescriptions',
                       onTap: () {
 
@@ -106,7 +106,7 @@ class PHomeOurServicesPage extends GetView<PHomeOurServicesController> {
                         //Get.toNamed(Routes.P_ALL_PRESCRIPTION);
                       }),
                   BuildService(
-                      image: 'assets/icon.png',
+                      image: 'assets/history.jpg',
                       title: 'History',
                       onTap: () {
 
@@ -125,7 +125,7 @@ class PHomeOurServicesPage extends GetView<PHomeOurServicesController> {
 
 
                   BuildService(
-                      image: 'assets/icon.png',
+                      image: 'assets/fontisto_prescription.jpg',
                       title: 'Report',
                       onTap: () {
 
@@ -145,7 +145,7 @@ class PHomeOurServicesPage extends GetView<PHomeOurServicesController> {
                       }),
 
                   BuildService(
-                      image: 'assets/icon.png',
+                      image: 'assets/package.jpg',
                       title: 'Package',
                       onTap: () {
 
@@ -172,7 +172,7 @@ class PHomeOurServicesPage extends GetView<PHomeOurServicesController> {
 
 
                   BuildService(
-                      image: 'assets/icon.png',
+                      image: 'assets/nearest_pharmacy.jpg',
                       title: 'Pharmacies',
                       onTap: () {
                         Get.toNamed(Routes.P_HOME_OUR_PHARMACY);
@@ -180,7 +180,7 @@ class PHomeOurServicesPage extends GetView<PHomeOurServicesController> {
                       }),
 
                   BuildService(
-                      image: 'assets/icon.png',
+                      image: 'assets/nearest_doctor.jpg',
                       title: 'Nearest Doctor',
                       onTap: () {
 
@@ -201,7 +201,7 @@ class PHomeOurServicesPage extends GetView<PHomeOurServicesController> {
 
 
                   BuildService(
-                      image: 'assets/icon.png',
+                      image: 'assets/nearest_Triage.jpg',
                       title: 'Nearest Triage\nPoint',
                       onTap: () {
 

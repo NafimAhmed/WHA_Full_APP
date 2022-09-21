@@ -5,6 +5,8 @@
 
 import 'package:flutter/material.dart';
 
+import 'P_See_All_Vital_Sign.dart';
+
 class P_Vital_Sign_Detail extends StatelessWidget
 {
   @override
@@ -50,13 +52,13 @@ class P_Vital_Sign_Detail extends StatelessWidget
                 ),
                 onPressed: (){
                   //logIn(emailController.text.toString(),passwordController.text.toString());
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) =>
-                  //             Doctor_Add_Vitals()
-                  //     )
-                  // );
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              P_See_All_Vital_Sign()
+                      )
+                  );
 
                 },
                 child: Row(
