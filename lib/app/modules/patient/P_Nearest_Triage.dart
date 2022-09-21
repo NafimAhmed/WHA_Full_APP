@@ -9,7 +9,7 @@ import 'P_Nearest_Triage_Detail.dart';
 class P_Nearest_Triage extends StatelessWidget
 {
 
-  List<String> phamacy_Name=['Maa Pharmacy','Tasfia Pharmacy','Apon Pharmacy','Rampura Pharmacy'];
+  List<String> phamacy_Name=['Maa Hospital','Tasfia hospital','Apon Hospital','Rampura hospital','Lab Aid Hospital'];
 
 
   @override
@@ -20,6 +20,32 @@ class P_Nearest_Triage extends StatelessWidget
 
         body: Column(
           children: [
+
+
+            Padding(
+              padding: const EdgeInsets.fromLTRB(31,0,0,15),//(left, top, right, bottom),
+              child: Row(
+                  children: [
+
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(28,52,220,0),
+                      child: Container(
+                          alignment: Alignment.topRight,
+                          child: Icon(Icons.arrow_back)
+                      ),
+                    ),
+
+
+
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0,52,0,0),
+                      child: Icon(Icons.search),//Image.asset("assets/logo.png",
+
+                    ),
+                  ]
+              ),
+            ),
+
 
 
 
