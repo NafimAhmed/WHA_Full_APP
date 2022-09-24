@@ -5,7 +5,10 @@
 
 import 'package:flutter/material.dart';
 
+import 'P_Add_BMI.dart';
+import 'P_Add_Vitals.dart';
 import 'P_See_All_Vital_Sign.dart';
+import 'P_See_BMI.dart';
 
 class P_Vital_Sign_Detail extends StatelessWidget
 {
@@ -117,13 +120,13 @@ class P_Vital_Sign_Detail extends StatelessWidget
                 ),
                 onPressed: (){
                   //logIn(emailController.text.toString(),passwordController.text.toString());
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) =>
-                  //             Doctor_Add_Vitals()
-                  //     )
-                  // );
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                             P_See_BMI()
+                      )
+                  );
 
                 },
                 child: Row(
@@ -186,13 +189,13 @@ class P_Vital_Sign_Detail extends StatelessWidget
                 ),
                 onPressed: (){
                   //logIn(emailController.text.toString(),passwordController.text.toString());
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) =>
-                  //             Doctor_Add_Vitals()
-                  //     )
-                  // );
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              P_Add_Vital_Sign()
+                      )
+                  );
 
                 },
                 child: Row(
@@ -252,13 +255,13 @@ class P_Vital_Sign_Detail extends StatelessWidget
                 ),
                 onPressed: (){
                   //logIn(emailController.text.toString(),passwordController.text.toString());
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) =>
-                  //             Doctor_Add_Vitals()
-                  //     )
-                  // );
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              P_Add_BMI()
+                      )
+                  );
 
                 },
                 child: Row(

@@ -16,6 +16,7 @@ void main() {
       debugShowCheckedModeBanner: false,
       home: const ConnectivityPipe()));*/
   runApp(Wha());
+  //runApp(PDashboardPage);
 }
 
 class ConnectivityPipe extends StatefulWidget {

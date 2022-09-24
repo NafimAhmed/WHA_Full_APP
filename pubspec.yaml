@@ -10,6 +10,7 @@ dependencies:
   sqflite: ^2.0.0+4
   google_fonts: ^2.1.0
   connectivity_plus: ^2.0.2
+  syncfusion_flutter_datepicker: ^20.2.50
   card_swiper: ^1.0.4
   shared_preferences: ^2.0.8
   avatar_glow: ^2.0.1

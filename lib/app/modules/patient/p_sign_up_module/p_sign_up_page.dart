@@ -406,6 +406,10 @@ class PSignUpPage extends GetView<PSignUpController> {
                       fontSize: 18,
                     ),
                   ),
+
+
+
+
                   const SizedBox(height: 12),
                   SizedBox(
                     height: 50,
@@ -449,6 +453,11 @@ class PSignUpPage extends GetView<PSignUpController> {
                     ),
                   ),
                   const SizedBox(height: 20),
+
+
+
+
+
 
                   const Text(
                     'Address',

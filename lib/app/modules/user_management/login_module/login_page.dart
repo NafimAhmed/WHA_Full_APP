@@ -373,9 +373,9 @@ class LoginPage extends GetView<LoginController> {
                           onPressed:() /*controller.opacity == 1.0 ?()*/ {
                             //controller.signIn();
 
-                           // signIn(phoneNumberEditingController.text.toString(),passwordEditingController.text.toString(),context);
-                            //loginService.login( phone,password);
+
                             login(phoneNumberEditingController.text.toString(), passwordEditingController.text.toString());
+                           // Get.toNamed(Routes.P_DASHBOARD);
 
 
 
